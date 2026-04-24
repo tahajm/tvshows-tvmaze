@@ -1,1 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+#app {
+  max-width: 1400px;
+  margin: 0 auto;
+}
