@@ -1,3 +1,1 @@
-<template>
-    hi from show details
-</template>
+<template>hi from show details</template>

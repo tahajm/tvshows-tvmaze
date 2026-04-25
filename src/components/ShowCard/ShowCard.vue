@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import RateBadge from '../RateBadge/RateBadge.vue';
-import type { Show } from '../../types/shows';
+import RateBadge from '@/components/RateBadge/RateBadge.vue';
+import type { Show } from '@/types/shows';
 
 const props = defineProps<{ show: Show }>();
 </script>

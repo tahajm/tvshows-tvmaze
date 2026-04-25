@@ -1,6 +1,6 @@
 import { onMounted, ref } from 'vue';
-import { getShowsFromApi } from '../api/shows';
-import type { Show } from '../types/shows';
+import { getShowsFromApi } from '@/api/shows';
+import type { Show } from '@/types/shows';
 
 export function useShows() {
   const isLoading = ref(false);

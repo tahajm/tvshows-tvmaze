@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import StarIcon from '../icons/StarIcon.vue';
+import StarIcon from '@/components/icons/StarIcon.vue';
 const props = defineProps<{ rate: number | null }>();
 </script>
 <template>
