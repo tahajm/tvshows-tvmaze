@@ -1,5 +1,14 @@
 @import 'tailwindcss';
 
+@theme static {
+  --color-primary:         #7c3aed;
+  --color-primary-dark:    #6d28d9;
+  --color-primary-surface: #ede9fe;
+
+  --color-accent:          #dc2626;
+  --color-rating:          #d97706;
+}
+
 #app {
   max-width: 1400px;
   margin: 0 auto;
