@@ -1,19 +1,30 @@
-import { onMounted, ref } from 'vue';
-import { getShowsFromApi } from '@/api/shows';
 import type { Show } from '@/types/shows';
+import { useFetch } from './useFetch';
+import { computed } from 'vue';
+import { API } from '@/config/api';
 
 export function useShows() {
-  const isLoading = ref(false);
-  const shows = ref<Show[]>([]);
+  const { isLoading, data: shows } = useFetch<Show[]>(API.shows);
 
-  onMounted(async () => {
-    isLoading.value = true;
-    shows.value = await getShowsFromApi();
-    isLoading.value = false;
+  const showsByGenre = computed(() => {
+    if (!shows.value) return {};
+    const grouped: Record<string, Show[]> = {};
+    const sorted = shows.value.sort(
+      (a, b) => Number(b.rating.average) - Number(a.rating.average),
+    );
+
+    sorted.forEach((show) => {
+      show.genres.forEach((genre) => {
+        if (!grouped[genre]) grouped[genre] = [];
+        grouped[genre].push(show);
+      });
+    });
+
+    return grouped;
   });
 
   return {
     isLoading,
-    shows,
+    showsByGenre,
   };
 }
