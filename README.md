@@ -1,5 +1,105 @@
-# Vue 3 + TypeScript + Vite
+# ABN Assignment
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A small Vue 3 application built with TypeScript and Vite.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Requirements
+
+- Node.js 20+ recommended
+- npm
+
+## Install
+
+```bash
+npm install
+```
+
+## Run Locally
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Vite will print the local URL in the terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## Available Scripts
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+Lint the project:
+
+```bash
+npm run lint
+```
+
+Format the codebase:
+
+```bash
+npm run format
+```
+
+## Tech Stack
+
+- Vue 3
+- TypeScript
+- Vite
+- Vue Router
+- Tailwind CSS
+
+## Details
+
+Frontend developer assignment
+Introduction
+The purpose of this assignment is to evaluate the candidate’s familiarity with frontend technologies,
+programming patterns and to showcase a sample of what clean and reusable code means to the candidate.
+This also helps in understanding the candidate’s basic design knowledge.
+Requirement
+You will use an open TV shows API http://www.tvmaze.com/api to create an application that allows users
+to view lists (preferably horizontal list) of TV shows based on different genres (drama, comedy, sports,
+etc.).
+Your goal is to develop a TV show dashboard that effectively categorizes and displays shows based on
+their genre. You are expected to create an intuitive and user-friendly UI where TV shows are not only
+grouped by genre but also sorted according to their ratings. When a user selects a particular show from
+the dashboard, they should be redirected to a detailed screen that provides comprehensive information
+about the show. To enhance user experience, a search feature should also be implemented allowing users
+to look up tv shows by name.
+Architecture
+There is no limit for this. Design your application as you wish. But make sure you will focus on clean
+code, reusability, frontend best practices. Show us that you know how to produce top notch applications.
+Notes
+• Please keep in mind that we use VueJS in ABN AMRO. Preferably, you complete this assessment
+using this framework.
+• Application must be responsive and mobile friendly
+• Please keep the leverage/use of scaffolding tools, boilerplate templates, plugins etc. to a minimum.
+We don’t expect you to create things from scratch but, we also would like to see your own
+creation
+• Please create a readme file that explains your architectural decisions (E.G. why did you choose a
+specific framework) and make sure you include instructions on how to run your solution, add
+details about NodeJS version being used and NPM.
+• Please include unit tests
+• Please check that application is running and there are no console errors before sending it to us
+• Please make sure that the UI is simple yet eye-catching
+• Please feel free to include more features other than the few mentioned above.
+• You may notice there is no endpoint in the TVMaze API that cleanly returns shows by genre.
+However, the "Show index" endpoint should contain the data you need
