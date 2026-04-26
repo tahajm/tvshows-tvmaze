@@ -2,10 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import ShowListView from '@/views/ShowsList.vue';
 import ShowDetail from '@/views/ShowDetail.vue';
+import SearchShow from '@/views/SearchShow.vue';
 
 const routes = [
-  { path: '/show/:id', component: ShowDetail },
   { path: '/', component: ShowListView },
+  { path: '/search', component: SearchShow },
+  { path: '/show/:id', component: ShowDetail },
 ];
 
 export const router = createRouter({
