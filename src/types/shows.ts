@@ -16,4 +16,5 @@ export interface Show {
   rating: Rating;
   image: Image | null;
   summary: string | null;
+  status: 'Running' | 'Ended';
 }
