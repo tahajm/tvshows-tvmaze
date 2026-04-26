@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Show } from '@/types/shows';
-import Tag from '@/components/Tag.vue';
+import AppTag from '@/components/AppTag.vue';
 import { computed } from 'vue';
 import RateBadge from '@/components/RateBadge.vue';
 import { stripHtml } from '@/utils/stripHtml';
@@ -51,7 +51,7 @@ const summary = computed(() => {
       >
         <ul class="flex flex-wrap gap-2" aria-label="Genres">
           <li v-for="genre in show.genres" :key="genre">
-            <Tag :label="genre" variant="primary" />
+            <AppTag :label="genre" variant="primary" />
           </li>
         </ul>
         <h1 class="text-white font-bold text-2xl md:text-4xl">
@@ -67,7 +67,7 @@ const summary = computed(() => {
             >{{ show.averageRuntime }} min</time
           >
         </div>
-        <Tag
+        <AppTag
           :label="show.status"
           :aria-label="`Status: ${show.status}`"
           class="w-fit"
