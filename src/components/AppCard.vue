@@ -19,13 +19,13 @@ defineProps<{
       { 'container--transformation': hoverAnimation },
     ]"
   >
-    <div class="overflow-hidden">
+    <div class="overflow-hidden aspect-2/3">
       <img
         v-if="image"
         :src="image"
         :alt="imageAlt"
         loading="lazy"
-        class="w-full object-cover"
+        class="w-full h-full object-cover"
         :class="[{ 'image--transformation': hoverAnimation }]"
       />
       <ImagePlaceholder v-else />
