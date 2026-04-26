@@ -6,7 +6,6 @@ const { isLoading, showsByGenre } = useShows();
 </script>
 <template>
   <main class="px-4 py-8">
-    <h1 class="text-3xl font-semibold mb-6">TV Shows</h1>
     <section>
       <div v-if="isLoading">Loading...</div>
       <ul v-else>
