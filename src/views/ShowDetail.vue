@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import { useFetch } from '@/composables/useFetch';
+import { useFetch } from '@vueuse/core';
 import { API } from '@/config/api';
 import type { Show } from '@/types/shows';
-import { useRoute } from 'vue-router';
 import ShowBanner from '@/components/ShowBanner.vue';
 import ShowEpisodes from '@/components/ShowEpisodes.vue';
 import CastList from '@/components/CastList.vue';
 
-const route = useRoute();
-const { id } = route.params;
-const { data: showDetail, isLoading } = useFetch<Show>(API.show(id));
+const props = defineProps<{ id: string }>();
+const { data: showDetail, isFetching: isLoading } = useFetch<Show>(
+  API.show(props.id),
+).json();
 </script>
+
 <template>
   <p v-if="isLoading" role="status" aria-live="polite">Loading...</p>
   <main v-else-if="showDetail">
