@@ -17,7 +17,7 @@ const props = defineProps<{ show: Show }>();
       size="large"
     >
       <template #subtitle>
-        <div class="hidden sm:flex gap-1 flex-wrap">
+        <div class="hidden sm:flex gap-1 flex-wrap mt-2">
           <AppTag :label="props.show.status" />
           <AppTag :label="props.show.language" />
         </div>
