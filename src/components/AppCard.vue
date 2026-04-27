@@ -13,11 +13,8 @@ defineProps<{
 
 <template>
   <div
-    class="group container"
-    :class="[
-      `container--${size}`,
-      { 'container--transformation': hoverAnimation },
-    ]"
+    class="group card"
+    :class="[`card--${size}`, { 'card--transformation': hoverAnimation }]"
   >
     <div class="overflow-hidden aspect-2/3">
       <img
@@ -51,19 +48,19 @@ defineProps<{
 <style scoped>
 @reference '@/style.css';
 
-.container {
+.card {
   @apply relative overflow-hidden bg-white flex flex-col;
 }
 
-.container--small {
+.card--small {
   @apply rounded-2xl w-40 shrink-0 shadow-md max-h-60;
 }
 
-.container--large {
+.card--large {
   @apply rounded-xl w-36 sm:w-44 md:w-52 shadow-lg mx-auto;
 }
 
-.container--transformation {
+.card--transformation {
   @apply duration-300 hover:-translate-y-1 hover:shadow-2xl;
 }
 

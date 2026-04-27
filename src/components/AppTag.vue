@@ -3,6 +3,7 @@ withDefaults(
   defineProps<{
     label: string | null | undefined;
     variant?: 'default' | 'primary' | 'outlined' | 'plain';
+    srPrefix?: string;
   }>(),
   {
     variant: 'default',
@@ -12,7 +13,8 @@ withDefaults(
 
 <template>
   <span v-if="label" class="tag" :class="`tag--${variant}`">
-    {{ label }}
+    <span v-if="srPrefix" class="sr-only">{{ srPrefix }}</span
+    >{{ label }}
   </span>
 </template>
 
