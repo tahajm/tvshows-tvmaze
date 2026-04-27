@@ -13,7 +13,7 @@ const resultsTitle = computed(() => {
 });
 </script>
 <template>
-  <section class="p-12">
+  <section class="mx-auto max-w-7xl px-4 py-8">
     <h3 class="py-8 font-semibold text-lg" aria-live="polite">
       {{ resultsTitle }}
     </h3>

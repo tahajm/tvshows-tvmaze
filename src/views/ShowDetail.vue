@@ -16,15 +16,13 @@ const { data: showDetail, isFetching: isLoading } = useFetch<Show>(
   <p v-if="isLoading" role="status" aria-live="polite">Loading...</p>
   <main v-else-if="showDetail">
     <ShowBanner :show="showDetail" />
-    <section aria-labelledby="cast-heading" class="p-4">
-      <h2 id="cast-heading" class="text-3xl font-semibold">Cast</h2>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+      <h2 class="text-3xl font-semibold">Cast</h2>
       <CastList :cast-list="showDetail._embedded?.cast" />
     </section>
 
-    <section aria-labelledby="episodes-heading" class="p-4 mt-4">
-      <h2 id="episodes-heading" class="text-3xl font-semibold mb-6">
-        Episodes
-      </h2>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+      <h2 class="text-3xl font-semibold mb-6">Episodes</h2>
       <ShowEpisodes :episodes="showDetail._embedded?.episodes" />
     </section>
   </main>
