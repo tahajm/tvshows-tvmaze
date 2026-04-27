@@ -4,14 +4,16 @@ import { computed } from 'vue';
 import { API } from '@/config/api';
 
 export function useShows() {
-  const { isFetching: isLoading, data: shows } = useFetch<Show[]>(
-    API.shows,
-  ).json();
+  const {
+    isFetching: isLoading,
+    data: shows,
+    error,
+  } = useFetch<Show[]>(API.shows).json();
 
   const showsByGenre = computed(() => {
     if (!shows.value) return {};
     const grouped: Record<string, Show[]> = {};
-    const sorted = shows.value.sort(
+    const sorted = [...shows.value].sort(
       (a, b) => Number(b.rating.average) - Number(a.rating.average),
     );
 
@@ -28,5 +30,6 @@ export function useShows() {
   return {
     isLoading,
     showsByGenre,
+    error,
   };
 }

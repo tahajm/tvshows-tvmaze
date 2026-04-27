@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppLoading from '@/components/AppLoading.vue';
 import SearchResultList from '@/components/SearchResultsList.vue';
+import ErrorMessage from '@/components/ErrorMessage.vue';
 import { useSearch } from '@/composables/useSearch';
 
 const { searchTerm, data, isLoading, error, debouncedTerm } = useSearch();
@@ -22,9 +23,7 @@ const { searchTerm, data, isLoading, error, debouncedTerm } = useSearch();
     </div>
 
     <AppLoading v-if="isLoading" />
-    <p v-else-if="error" role="alert" class="p-4 text-accent">
-      Something went wrong. Please try again.
-    </p>
+    <ErrorMessage v-else-if="error" />
     <SearchResultList
       v-else-if="debouncedTerm && data"
       :search-results="data"

@@ -5,15 +5,21 @@ import type { Show } from '@/types/shows';
 import ShowBanner from '@/components/ShowBanner.vue';
 import ShowEpisodes from '@/components/ShowEpisodes.vue';
 import CastList from '@/components/CastList.vue';
+import AppLoading from '@/components/AppLoading.vue';
+import ErrorMessage from '@/components/ErrorMessage.vue';
 
 const props = defineProps<{ id: string }>();
-const { data: showDetail, isFetching: isLoading } = useFetch<Show>(
-  API.show(props.id),
-).json();
+const {
+  data: showDetail,
+  isFetching: isLoading,
+  error,
+} = useFetch<Show>(API.show(props.id)).json();
 </script>
 
 <template>
-  <p v-if="isLoading" role="status" aria-live="polite">Loading...</p>
+  <AppLoading v-if="isLoading" />
+  <ErrorMessage v-if="error" />
+
   <main v-else-if="showDetail">
     <ShowBanner :show="showDetail" />
     <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
