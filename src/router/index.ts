@@ -7,7 +7,7 @@ import SearchShow from '@/views/SearchShow.vue';
 const routes = [
   { path: '/', component: ShowListView },
   { path: '/search', component: SearchShow },
-  { path: '/show/:id', component: ShowDetail },
+  { path: '/show/:id', component: ShowDetail, props: true },
 ];
 
 export const router = createRouter({
