@@ -57,6 +57,10 @@ VueUse’s `useFetch` is used throughout. Reactive URLs are passed as getter fun
 
 `AppCard` is shared between the show grid and cast list. Size variants (`small` / `large`) and an `hoverAnimation` prop handle visual differences. Slots (`#subtitle`, `#overlay`) handle content that varies per use case.
 
+### Assumptions
+
+**TVMaze API response ordering** — Episodes returned by `/shows/:id/episodes` are assumed to be already sorted by season and episode number in ascending order. The season selector in `ShowEpisodes.vue` preserves this natural ordering without applying a client-side sort.
+
 ### Error Handling
 
 Recoverable errors (search, show detail) are shown inline near the UI that caused them. Loading states use `role="status"`, errors use `role="alert"`.
