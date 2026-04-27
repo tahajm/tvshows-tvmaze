@@ -22,17 +22,15 @@ interface ImageFull {
   };
 }
 
+interface Avatar {
+  id: number;
+  name: string;
+  image: Image | null;
+}
+
 export interface Cast {
-  person: {
-    id: number;
-    name: string;
-    image?: Image;
-  };
-  character: {
-    id: number;
-    name: string;
-    image?: Image;
-  };
+  person: Avatar;
+  character: Avatar;
 }
 export interface Episode {
   id: number;
@@ -40,7 +38,7 @@ export interface Episode {
   airdate: string;
   runtime: number;
   rating: Rating;
-  image: Image;
+  image: Image | null;
   summary: string;
   season: number;
   number: number;
@@ -55,7 +53,7 @@ export interface Show {
   rating: Rating;
   image: Image | null;
   summary: string | null;
-  status: 'Running' | 'Ended';
+  status: string;
   averageRuntime: number;
   network: {
     name: string;
