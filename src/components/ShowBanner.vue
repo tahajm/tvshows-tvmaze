@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { Show } from '@/types/shows';
-import AppTag from '@/components/AppTag.vue';
+import AppTag from '@/components/ui/AppTag.vue';
 import { computed } from 'vue';
-import RateBadge from '@/components/RateBadge.vue';
+import RateBadge from '@/components/ui/RateBadge.vue';
 import { stripHtml } from '@/utils/stripHtml';
 
 const props = defineProps<{ show: Show }>();

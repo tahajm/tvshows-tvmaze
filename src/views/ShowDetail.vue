@@ -5,8 +5,8 @@ import type { Show } from '@/types/shows';
 import ShowBanner from '@/components/ShowBanner.vue';
 import ShowEpisodes from '@/components/ShowEpisodes.vue';
 import CastList from '@/components/CastList.vue';
-import AppLoading from '@/components/AppLoading.vue';
-import ErrorMessage from '@/components/ErrorMessage.vue';
+import AppLoading from '@/components/ui/AppLoading.vue';
+import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 
 const props = defineProps<{ id: string }>();
 const {

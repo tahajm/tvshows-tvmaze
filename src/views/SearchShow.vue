@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AppLoading from '@/components/AppLoading.vue';
+import AppLoading from '@/components/ui/AppLoading.vue';
 import SearchResultList from '@/components/SearchResultsList.vue';
-import ErrorMessage from '@/components/ErrorMessage.vue';
+import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import { useSearch } from '@/composables/useSearch';
 
 const { searchTerm, data, isLoading, error, debouncedTerm } = useSearch();

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RingIcon from '@/components/icons/RingIcon.vue';
+import RingIcon from '@/components/ui/icons/RingIcon.vue';
 </script>
 <template>
   <div class="w-full flex items-center justify-center p-2">

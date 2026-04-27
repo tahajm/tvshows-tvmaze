@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import TVIcon from '@/components/icons/TVIcon.vue';
+import TVIcon from '@/components/ui/icons/TVIcon.vue';
 </script>
 <template>
   <header class="bg-primary shadow-lg flex p-4 items-center justify-between">

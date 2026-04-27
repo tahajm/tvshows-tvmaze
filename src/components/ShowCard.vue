@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import RateBadge from '@/components/RateBadge.vue';
-import AppTag from '@/components/AppTag.vue';
-import AppCard from '@/components/AppCard.vue';
+import RateBadge from '@/components/ui/RateBadge.vue';
+import AppTag from '@/components/ui/AppTag.vue';
+import AppCard from '@/components/ui/AppCard.vue';
 import type { Show } from '@/types/shows';
 
 const props = defineProps<{ show: Show }>();

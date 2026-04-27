@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AppLoading from '@/components/AppLoading.vue';
-import ErrorMessage from '@/components/ErrorMessage.vue';
+import AppLoading from '@/components/ui/AppLoading.vue';
+import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import ShowCard from '@/components/ShowCard.vue';
 import { useShows } from '@/composables/useShows';
 

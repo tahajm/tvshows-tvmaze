@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ImagePlaceholder from '@/components/ImagePlaceholder.vue';
+import ImagePlaceholder from '@/components/ui/ImagePlaceholder.vue';
 
 defineProps<{
   image?: string | null;
