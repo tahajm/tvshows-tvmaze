@@ -3,17 +3,57 @@ import type { Episode } from '@/types/shows';
 import RateBadge from '@/components/ui/RateBadge.vue';
 import ImagePlaceholder from '@/components/ui/ImagePlaceholder.vue';
 import { formatDate } from '@/utils/formatDate';
+import { computed, ref } from 'vue';
 
-defineProps<{ episodes: Episode[] | undefined }>();
+const props = defineProps<{ episodes: Episode[] | undefined }>();
+
+const selectedSeason = ref<number | null>(null);
+
+const seasonList = computed(() => {
+  if (!props.episodes) return [];
+  return [...new Set(props.episodes.map((e) => e.season))];
+});
+
+const activeSeason = computed(() =>
+  seasonList.value.includes(selectedSeason.value!)
+    ? selectedSeason.value
+    : (seasonList.value[0] ?? null),
+);
+
+const filteredEpisodes = computed(
+  () => props.episodes?.filter((e) => e.season === activeSeason.value) ?? [],
+);
 </script>
 <template>
+  <div class="flex items-center gap-4">
+    <h3 class="font-semibold text-lg shrink-0">Seasons:</h3>
+    <ol class="flex gap-2 items-center overflow-x-auto py-1">
+      <li
+        :class="[
+          activeSeason === season
+            ? 'bg-primary text-white'
+            : 'border-primary text-primary',
+        ]"
+        class="border flex rounded-lg shrink-0"
+        v-for="(season, index) in seasonList"
+        :key="index"
+      >
+        <button
+          @click="selectedSeason = season"
+          class="py-2 px-4 cursor-pointer"
+        >
+          {{ season }}
+        </button>
+      </li>
+    </ol>
+  </div>
   <ol
-    v-if="episodes && episodes?.length > 0"
+    v-if="filteredEpisodes.length > 0"
     class="flex flex-col divide-y divide-gray-100"
     aria-label="Episodes"
   >
     <li
-      v-for="episode in episodes"
+      v-for="episode in filteredEpisodes"
       :key="episode.id"
       class="flex items-center gap-6 py-4 hover:bg-gray-50 px-2 rounded-xl"
     >
