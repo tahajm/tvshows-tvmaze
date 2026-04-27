@@ -65,7 +65,7 @@ Recoverable errors (search, show detail) are shown inline near the UI that cause
 
 - **Heading hierarchy** — single `<h1>` in the app header; views use `<h2>` onwards so the document outline is correct
 - **Labelled inputs** — all form inputs have an associated `<label>` element; `placeholder` is not used as a substitute
-- **Landmark regions** — `<header>`, `<main>`, `<nav aria-label="Main">`, `<footer>`, and `<section>` with headings give screen reader users a navigable page structure
+- **Landmark regions** — `<header>`, `<main>`, `<nav>`, `<footer>`, and `<section>` with headings give screen reader users a navigable page structure
 - **Live regions** — loading states use `role="status" aria-live="polite"` so they are announced without interrupting the user; errors use `role="alert"` for immediate announcement
 - **Decorative content** — SVG icons that are already described by adjacent text carry `aria-hidden="true"` to avoid redundant announcements
 - **Semantic lists** — show genres use `<ul>`, episode lists and search results use `<ol>` (ordered, since results have a meaningful rank/order)
