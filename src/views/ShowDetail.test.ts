@@ -6,7 +6,7 @@ import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import ShowBanner from '@/components/ShowBanner.vue';
 import CastList from '@/components/CastList.vue';
-import ShowEpisodes from '@/components/ShowEpisodes.vue';
+import ShowEpisodes from '@/components/ShowEpisodes/ShowEpisodes.vue';
 
 const isLoading: Ref<boolean> = ref(false);
 const error: Ref<unknown> = ref(null);
