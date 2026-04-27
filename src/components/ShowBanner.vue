@@ -54,9 +54,9 @@ const summary = computed(() => {
             <AppTag :label="genre" variant="primary" />
           </li>
         </ul>
-        <h1 class="text-white font-bold text-2xl md:text-4xl">
+        <h2 class="text-white font-bold text-2xl md:text-4xl">
           {{ show.name }}
-        </h1>
+        </h2>
         <RateBadge :rate="show.rating.average" />
         <div
           class="text-white flex flex-wrap gap-3 text-sm md:text-base items-center"
@@ -67,11 +67,7 @@ const summary = computed(() => {
             >{{ show.averageRuntime }} min</time
           >
         </div>
-        <AppTag
-          :label="show.status"
-          :aria-label="`Status: ${show.status}`"
-          class="w-fit"
-        />
+        <AppTag :label="show.status" sr-prefix="Status: " class="w-fit" />
         <p
           v-if="show.summary"
           class="overflow-hidden text-gray-200 text-sm md:text-base line-clamp-8"

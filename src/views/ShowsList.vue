@@ -9,7 +9,7 @@ const { isLoading, showsByGenre, error } = useShows();
 <template>
   <main class="px-4 py-8">
     <AppLoading v-if="isLoading" />
-    <ErrorMessage v-if="error" />
+    <ErrorMessage v-else-if="error" />
     <ul v-else>
       <li class="py-8" v-for="(shows, genre) in showsByGenre" :key="genre">
         <h2 class="py-4 font-bold text-2xl">{{ genre }}</h2>

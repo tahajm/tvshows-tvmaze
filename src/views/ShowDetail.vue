@@ -18,7 +18,7 @@ const {
 
 <template>
   <AppLoading v-if="isLoading" />
-  <ErrorMessage v-if="error" />
+  <ErrorMessage v-else-if="error" />
 
   <main v-else-if="showDetail">
     <ShowBanner :show="showDetail" />

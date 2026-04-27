@@ -14,9 +14,9 @@ const resultsTitle = computed(() => {
 </script>
 <template>
   <section class="mx-auto max-w-7xl px-4 py-8">
-    <h3 class="py-8 font-semibold text-lg" aria-live="polite">
+    <h2 class="py-8 font-semibold text-lg">
       {{ resultsTitle }}
-    </h3>
+    </h2>
     <ol class="flex flex-wrap gap-4">
       <li v-for="result in searchResults" :key="result.show.id">
         <ShowCard :show="result.show" />

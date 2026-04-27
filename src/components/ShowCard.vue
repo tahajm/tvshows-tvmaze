@@ -18,8 +18,8 @@ const props = defineProps<{ show: Show }>();
     >
       <template #subtitle>
         <div class="hidden sm:flex gap-1 flex-wrap mt-2">
-          <AppTag :label="props.show.status" />
-          <AppTag :label="props.show.language" />
+          <AppTag :label="props.show.status" sr-prefix="Status: " />
+          <AppTag :label="props.show.language" sr-prefix="Language: " />
         </div>
       </template>
       <template #overlay>
