@@ -66,3 +66,8 @@ export interface Show {
     images?: ImageFull[];
   };
 }
+
+export interface SearchResult {
+  score: number;
+  show: Show;
+}
