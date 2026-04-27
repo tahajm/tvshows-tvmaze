@@ -1,10 +1,12 @@
 import type { Show } from '@/types/shows';
-import { useFetch } from './useFetch';
+import { useFetch } from '@vueuse/core';
 import { computed } from 'vue';
 import { API } from '@/config/api';
 
 export function useShows() {
-  const { isLoading, data: shows } = useFetch<Show[]>(API.shows);
+  const { isFetching: isLoading, data: shows } = useFetch<Show[]>(
+    API.shows,
+  ).json();
 
   const showsByGenre = computed(() => {
     if (!shows.value) return {};
