@@ -54,7 +54,7 @@ export interface Show {
   image: Image | null;
   summary: string | null;
   status: string;
-  averageRuntime: number;
+  averageRuntime: number | null;
   network: {
     name: string;
   };

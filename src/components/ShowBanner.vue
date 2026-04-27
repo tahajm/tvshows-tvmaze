@@ -63,7 +63,9 @@ const summary = computed(() => {
         >
           <span>{{ show.language }}</span>
           <span>{{ show.network?.name }}</span>
-          <time :datetime="`PT${show.averageRuntime}M`"
+          <time
+            v-if="show.averageRuntime"
+            :datetime="`PT${show.averageRuntime}M`"
             >{{ show.averageRuntime }} min</time
           >
         </div>

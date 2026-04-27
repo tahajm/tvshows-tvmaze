@@ -51,5 +51,5 @@ defineProps<{ episodes: Episode[] | undefined }>();
       <RateBadge :rate="episode.rating.average" />
     </li>
   </ol>
-  <p v-else>No Episode to show</p>
+  <p v-else class="p-4 text-gray-400">No Episodes Available</p>
 </template>
