@@ -4,7 +4,7 @@ import { ref, type Ref } from 'vue';
 import ShowDetail from './ShowDetail.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
-import ShowBanner from '@/components/ShowBanner.vue';
+import ShowBanner from '@/components/ShowBanner/ShowBanner.vue';
 import CastList from '@/components/CastList.vue';
 import ShowEpisodes from '@/components/ShowEpisodes/ShowEpisodes.vue';
 
