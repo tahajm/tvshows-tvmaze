@@ -32,7 +32,7 @@ defineProps<{
       <slot name="subtitle">
         <p
           v-if="subtitle"
-          class="text-sm text-gray-400 truncate"
+          class="text-sm text-gray-500 truncate"
           :title="subtitle"
         >
           {{ subtitle }}

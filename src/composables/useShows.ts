@@ -13,7 +13,7 @@ export function useShows() {
   const showsByGenre = computed(() => {
     if (!shows.value) return {};
     const grouped: Record<string, Show[]> = {};
-    const sorted = [...shows.value].sort(
+    const sorted: Show[] = [...shows.value].sort(
       (a, b) => Number(b.rating.average) - Number(a.rating.average),
     );
 

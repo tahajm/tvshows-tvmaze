@@ -8,7 +8,7 @@ defineProps<{ episode: Episode }>();
 </script>
 <template>
   <div class="flex items-center gap-6 py-4 hover:bg-gray-50 px-2 rounded-xl">
-    <span class="text-sm text-gray-400 text-center">
+    <span class="text-sm text-gray-500 text-center">
       {{ episode.number }}
     </span>
     <div class="hidden md:block">
@@ -22,11 +22,11 @@ defineProps<{ episode: Episode }>();
       <ImagePlaceholder v-else class="rounded-lg" />
     </div>
     <div class="flex flex-col gap-1 flex-1 min-w-8" :title="episode.name">
-      <h3 class="font-medium truncate" aria-label="Name">
+      <h3 class="font-medium truncate">
         {{ episode.name }}
       </h3>
       <div
-        class="text-sm text-gray-400 flex gap-3 whitespace-nowrap overflow-hidden"
+        class="text-sm text-gray-500 flex gap-3 whitespace-nowrap overflow-hidden"
       >
         <time
           v-if="episode.airdate"

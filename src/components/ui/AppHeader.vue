@@ -29,7 +29,7 @@ import TVIcon from '@/components/ui/icons/TVIcon.vue';
 @reference "@/style.css";
 
 .nav-link {
-  @apply px-4 py-1.5 rounded-full text-sm font-medium text-white/70 hover:text-white transition-colors;
+  @apply px-4 py-1.5 rounded-full text-sm font-medium text-white/90 hover:text-white transition-colors;
 }
 
 .nav-link--active {

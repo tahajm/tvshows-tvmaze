@@ -34,5 +34,5 @@ const filteredEpisodes = computed(
       <EpisodeListItem :episode="episode" />
     </li>
   </ol>
-  <p v-else class="p-4 text-gray-400">No Episodes Available</p>
+  <p v-else class="p-4 text-gray-500">No Episodes Available</p>
 </template>
