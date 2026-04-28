@@ -10,7 +10,7 @@ export function useSearch() {
   const debouncedTerm = refDebounced(searchTerm, DEBOUNCE_TIME);
 
   const url = computed(() => {
-    return API.searchShows(debouncedTerm.value);
+    return API.searchShows(debouncedTerm.value.trim());
   });
   const {
     data,

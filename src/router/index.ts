@@ -9,7 +9,7 @@ const SearchShow = () => import('@/views/SearchShow.vue');
 const routes = [
   { path: '/', component: ShowsList },
   { path: '/search', component: SearchShow },
-  { path: '/show/:id', component: ShowDetail, props: true },
+  { path: '/show/:id(\\d+)', component: ShowDetail, props: true },
   { path: '/:pathMatch(.*)*', component: NotFound },
 ];
 

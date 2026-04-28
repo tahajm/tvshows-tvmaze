@@ -16,7 +16,7 @@ const backgroundImage = computed(() => {
 });
 
 const summary = computed(() =>
-  props.show.summary ? stripHtml(props.show.summary!) : '',
+  props.show.summary ? stripHtml(props.show.summary) : '',
 );
 </script>
 <template>
@@ -39,7 +39,7 @@ const summary = computed(() =>
         v-if="show.image?.original"
         class="w-full md:w-sm aspect-2/3 object-cover rounded-2xl self-start shrink-0 shadow-2xl"
         :src="show.image.original"
-        :srcset="`${show.image.medium} 1x ${show.image.original} 2x`"
+        :srcset="`${show.image.medium} 1x, ${show.image.original} 2x`"
         :alt="show.name"
         loading="eager"
         fetchpriority="high"
