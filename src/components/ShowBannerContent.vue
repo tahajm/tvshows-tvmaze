@@ -18,7 +18,7 @@ defineProps<{ show: Show; summary: string }>();
       class="text-white flex flex-wrap gap-3 text-sm md:text-base items-center"
     >
       <span>{{ show.language }}</span>
-      <span>{{ show.network?.name }}</span>
+      <span>{{ show.network?.name ?? show.webChannel?.name }}</span>
       <time v-if="show.averageRuntime" :datetime="`PT${show.averageRuntime}M`"
         >{{ show.averageRuntime }} min</time
       >

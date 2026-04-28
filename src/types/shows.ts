@@ -55,9 +55,8 @@ export interface Show {
   summary: string | null;
   status: string;
   averageRuntime: number | null;
-  network: {
-    name: string;
-  };
+  network: { name: string } | null;
+  webChannel: { name: string } | null;
   _embedded?: {
     episodes?: Episode[];
     cast?: Cast[];
