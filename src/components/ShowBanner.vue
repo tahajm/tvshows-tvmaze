@@ -1,11 +1,21 @@
 <script setup lang="ts">
 import type { Show } from '@/types/shows';
 import ShowBannerContent from './ShowBannerContent.vue';
-import { useShowBanner } from './showBanner.composable';
+import { computed } from 'vue';
+import { stripHtml } from '@/utils/stripHtml';
 
 const props = defineProps<{ show: Show }>();
 
-const { backgroundImage, summary } = useShowBanner(() => props.show);
+const backgroundImage = computed(() => {
+  const background = props.show._embedded?.images?.find(
+    (image) => image.type === 'background',
+  );
+  return background ? background.resolutions.original.url : null;
+});
+
+const summary = computed(() =>
+  props.show.summary ? stripHtml(props.show.summary!) : '',
+);
 </script>
 <template>
   <section class="relative overflow-hidden p-4">

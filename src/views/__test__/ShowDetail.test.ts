@@ -4,9 +4,9 @@ import { ref, type Ref } from 'vue';
 import ShowDetail from '../ShowDetail.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
-import ShowBanner from '@/components/ShowBanner/ShowBanner.vue';
+import ShowBanner from '@/components/ShowBanner.vue';
 import CastList from '@/components/CastList.vue';
-import ShowEpisodes from '@/components/ShowEpisodes/ShowEpisodes.vue';
+import EpisodeList from '@/components/EpisodeList.vue';
 
 const isLoading: Ref<boolean> = ref(false);
 const error: Ref<unknown> = ref(null);
@@ -61,7 +61,7 @@ describe('ShowDetail', () => {
     const wrapper = mount(ShowDetail, mountOptions);
     expect(wrapper.findComponent(ShowBanner).exists()).toBe(true);
     expect(wrapper.findComponent(CastList).exists()).toBe(true);
-    expect(wrapper.findComponent(ShowEpisodes).exists()).toBe(true);
+    expect(wrapper.findComponent(EpisodeList).exists()).toBe(true);
   });
 
   it('shows nothing when data is null and not loading', () => {

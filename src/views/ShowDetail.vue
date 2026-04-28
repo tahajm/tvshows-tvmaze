@@ -2,8 +2,8 @@
 import { useFetch } from '@vueuse/core';
 import { API } from '@/config/api';
 import type { Show } from '@/types/shows';
-import ShowBanner from '@/components/ShowBanner/ShowBanner.vue';
-import ShowEpisodes from '@/components/ShowEpisodes/ShowEpisodes.vue';
+import ShowBanner from '@/components/ShowBanner.vue';
+import EpisodeList from '@/components/EpisodeList.vue';
 import CastList from '@/components/CastList.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
@@ -29,7 +29,7 @@ const {
 
     <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <h2 class="text-3xl font-semibold mb-6">Episodes</h2>
-      <ShowEpisodes :episodes="showDetail._embedded?.episodes" />
+      <EpisodeList :episodes="showDetail._embedded?.episodes" />
     </section>
   </main>
 </template>
