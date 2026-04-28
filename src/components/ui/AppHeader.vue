@@ -16,8 +16,9 @@ import TVIcon from '@/components/ui/icons/TVIcon.vue';
         to="/search"
         class="nav-link"
         exact-active-class="nav-link--active"
-        >Search</RouterLink
       >
+        Search
+      </RouterLink>
     </nav>
   </header>
 </template>

@@ -14,8 +14,8 @@ withDefaults(
 
 <template>
   <span v-if="label" class="tag" :class="`tag--${variant}`">
-    <span v-if="srPrefix" class="sr-only">{{ srPrefix }}</span
-    >{{ label }}
+    <span v-if="srPrefix" class="sr-only">{{ srPrefix }}</span>
+    {{ label }}
   </span>
 </template>
 

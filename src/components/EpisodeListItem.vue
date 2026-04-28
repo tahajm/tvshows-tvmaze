@@ -28,12 +28,12 @@ defineProps<{ episode: Episode }>();
       <div
         class="text-sm text-gray-500 flex gap-3 whitespace-nowrap overflow-hidden"
       >
-        <time v-if="episode.airdate" :datetime="episode.airdate">{{
-          formatDate(episode.airdate)
-        }}</time>
-        <time :datetime="`PT${episode.runtime}M`"
-          >{{ episode.runtime }} min</time
-        >
+        <time v-if="episode.airdate" :datetime="episode.airdate">
+          {{ formatDate(episode.airdate) }}
+        </time>
+        <time :datetime="`PT${episode.runtime}M`">
+          {{ episode.runtime }} min
+        </time>
       </div>
     </div>
     <RateBadge :rate="episode.rating.average" />

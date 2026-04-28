@@ -19,9 +19,9 @@ defineProps<{ show: Show; summary: string }>();
     >
       <span>{{ show.language }}</span>
       <span>{{ show.network?.name ?? show.webChannel?.name }}</span>
-      <time v-if="show.averageRuntime" :datetime="`PT${show.averageRuntime}M`"
-        >{{ show.averageRuntime }} min</time
-      >
+      <time v-if="show.averageRuntime" :datetime="`PT${show.averageRuntime}M`">
+        {{ show.averageRuntime }} min
+      </time>
     </div>
     <AppTag :label="show.status" sr-prefix="Status: " class="w-fit" />
     <p
