@@ -14,7 +14,7 @@ const resultsTitle = computed(() => {
 </script>
 <template>
   <section class="mx-auto max-w-7xl px-4 py-8">
-    <h2 class="py-8 font-semibold text-lg">
+    <h2 class="py-8 font-semibold text-lg" role="status">
       {{ resultsTitle }}
     </h2>
     <ol class="flex flex-wrap gap-4">
