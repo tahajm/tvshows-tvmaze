@@ -14,7 +14,7 @@ export function useShows() {
     if (!shows.value) return {};
     const grouped: Record<string, Show[]> = {};
     const sorted: Show[] = [...shows.value].sort(
-      (a, b) => Number(b.rating.average) - Number(a.rating.average),
+      (a, b) => (b.rating?.average ?? 0) - (a.rating?.average ?? 0),
     );
 
     sorted.forEach((show) => {
