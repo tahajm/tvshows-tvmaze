@@ -8,12 +8,13 @@ const emit = defineEmits<{ select: [season: number] }>();
     <h3 class="font-semibold text-lg shrink-0">Seasons:</h3>
     <ol class="flex gap-2 items-center overflow-x-auto py-2">
       <li
-        v-for="(season, index) in seasons"
-        :key="index"
+        v-for="season in seasons"
+        :key="season"
         :class="{ 'bg-primary text-white': activeSeason === season }"
         class="border border-primary text-primary flex rounded-lg shrink-0"
       >
         <button
+          :aria-pressed="activeSeason === season"
           class="py-2 px-4 cursor-pointer"
           @click="emit('select', season)"
         >

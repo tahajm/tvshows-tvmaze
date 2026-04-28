@@ -20,7 +20,7 @@ defineProps<{
       <img
         v-if="image"
         :src="image"
-        :alt="imageAlt"
+        :alt="imageAlt ?? title"
         loading="lazy"
         class="w-full h-full object-cover"
         :class="[{ 'image--transformation': hoverAnimation }]"

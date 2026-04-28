@@ -9,16 +9,13 @@ import TVIcon from '@/components/ui/icons/TVIcon.vue';
       <h1 class="text-xl font-bold">TV Shows</h1>
     </div>
     <nav class="flex items-center gap-1">
-      <RouterLink
-        to="/"
-        class="nav-link"
-        :class="{ 'nav-link--active': $route.path === '/' }"
-        >Home</RouterLink
-      >
+      <RouterLink to="/" class="nav-link" exact-active-class="nav-link--active">
+        Home
+      </RouterLink>
       <RouterLink
         to="/search"
         class="nav-link"
-        :class="{ 'nav-link--active': $route.path === '/search' }"
+        exact-active-class="nav-link--active"
         >Search</RouterLink
       >
     </nav>
