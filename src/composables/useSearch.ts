@@ -25,6 +25,7 @@ export function useSearch() {
       execute();
     } else {
       data.value = null;
+      error.value = null;
     }
   });
 
