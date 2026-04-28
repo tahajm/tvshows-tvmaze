@@ -10,16 +10,19 @@ const { searchTerm, data, isLoading, error, debouncedTerm } = useSearch();
 <template>
   <main class="px-4 py-8">
     <div class="flex flex-col items-center">
-      <label for="searchShows" class="text-2xl font-semibold mb-6"
-        >Search TV Shows</label
+      <label
+        for="searchShows"
+        class="flex flex-col w-full max-w-2xl text-2xl mb-6"
       >
-      <input
-        v-model="searchTerm"
-        id="searchShows"
-        type="search"
-        placeholder="Search for a show..."
-        class="w-full max-w-2xl p-3 text-base border-2 border-primary rounded-xl placeholder:text-slate-400"
-      />
+        <span class="mb-6">Search TV Shows</span>
+        <input
+          v-model="searchTerm"
+          id="searchShows"
+          type="search"
+          placeholder="Search for a show..."
+          class="w-full p-3 text-base border-2 border-primary rounded-xl placeholder:text-slate-400"
+        />
+      </label>
     </div>
 
     <AppLoading v-if="isLoading" />
