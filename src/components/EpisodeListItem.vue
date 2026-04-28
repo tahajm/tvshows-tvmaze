@@ -21,7 +21,7 @@ defineProps<{ episode: Episode }>();
       />
       <ImagePlaceholder v-else class="rounded-lg" />
     </div>
-    <div class="flex flex-col gap-1 flex-1 min-w-8" :title="episode.name">
+    <div class="flex flex-col gap-1 flex-1 min-w-8">
       <h3 class="font-medium truncate">
         {{ episode.name }}
       </h3>

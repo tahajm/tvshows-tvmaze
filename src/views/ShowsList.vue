@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { useTitle } from '@vueuse/core';
+
 import ShowCard from '@/components/ShowCard.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import { useShows } from '@/composables/useShows';
+
+useTitle('TV Shows');
 
 const { isLoading, showsByGenre, error } = useShows();
 </script>

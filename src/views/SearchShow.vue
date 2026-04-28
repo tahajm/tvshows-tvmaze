@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { useTitle } from '@vueuse/core';
+
 import SearchResultList from '@/components/SearchResultsList.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import { useSearch } from '@/composables/useSearch';
+
+useTitle('Search — TV Shows');
 
 const { searchTerm, data, isLoading, error, debouncedTerm } = useSearch();
 </script>

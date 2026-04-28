@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { useFetch } from '@vueuse/core';
+import { useFetch, useTitle } from '@vueuse/core';
+import { computed } from 'vue';
 
 import CastList from '@/components/CastList.vue';
 import EpisodeList from '@/components/EpisodeList.vue';
@@ -15,6 +16,12 @@ const {
   isFetching: isLoading,
   error,
 } = useFetch<Show>(() => API.show(props.id), { refetch: true }).json();
+
+const viewTitle = computed(() => {
+  if (showDetail.value) return `${showDetail.value.name} - TV Shows`;
+  return 'TV Shows';
+});
+useTitle(viewTitle);
 </script>
 
 <template>
