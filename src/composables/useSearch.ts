@@ -23,6 +23,8 @@ export function useSearch() {
   watch(debouncedTerm, (value) => {
     if (value) {
       execute();
+    } else {
+      data.value = null;
     }
   });
 
