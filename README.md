@@ -36,6 +36,7 @@ Copy `.env.example` to `.env` to override. The app falls back to the default if 
 | `pnpm lint`      | ESLint                                      |
 | `pnpm format`    | Prettier (write)                            |
 | `pnpm test`      | Vitest (watch mode)                         |
+| `pnpm coverage`  | Vitest (single run + coverage report)       |
 
 ## Stack
 
@@ -161,6 +162,19 @@ Two-tier strategy: `ErrorBoundary` at the App level catches unexpected thrown er
 
 ## Tooling
 
+## Test Coverage
+
+| Metric     | Coverage |
+| ---------- | -------- |
+| Statements | 86.13%   |
+| Branches   | 74.31%   |
+| Functions  | 66.66%   |
+| Lines      | 88.23%   |
+
+Run `pnpm coverage` to regenerate. Output goes to `coverage/index.html`.
+
+## Tooling
+
 | Tool        | Purpose                                                                                |
 | ----------- | -------------------------------------------------------------------------------------- |
 | ESLint      | Linting (`eslint-plugin-vue`, `vuejs-accessibility`, `simple-import-sort`, TypeScript) |
@@ -179,4 +193,3 @@ Items intentionally deferred — known trade-offs for the scope of this assignme
 - **Prefetching** — hovering a show card could prefetch `API.show(id)` for near-instant navigation.
 - **Search filters** — no genre filter or sort-by-rating on the search page.
 - **No e2e tests** — a single Playwright happy-path script (home → show detail → search) would round out the testing story.
-- **Coverage reporting** — `@vitest/coverage-v8` and a `test:coverage` script are not wired up.
