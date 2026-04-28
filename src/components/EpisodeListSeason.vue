@@ -6,16 +6,12 @@ const emit = defineEmits<{ select: [season: number] }>();
 <template>
   <div class="flex items-center gap-4">
     <h3 class="font-semibold text-lg shrink-0">Seasons:</h3>
-    <ol class="flex gap-2 items-center overflow-x-auto py-1">
+    <ol class="flex gap-2 items-center overflow-x-auto py-2">
       <li
         v-for="(season, index) in seasons"
         :key="index"
-        :class="[
-          activeSeason === season
-            ? 'bg-primary text-white'
-            : 'border-primary text-primary',
-        ]"
-        class="border flex rounded-lg shrink-0"
+        :class="{ 'bg-primary text-white': activeSeason === season }"
+        class="border border-primary text-primary flex rounded-lg shrink-0"
       >
         <button
           @click="emit('select', season)"
