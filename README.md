@@ -30,7 +30,7 @@ npm run dev
 | Framework    | Vue 3           | Assignment requirement; `<script setup>` + Composition API gives clean, type-safe component logic |
 | Language     | TypeScript      | Type safety across API responses, component props, and composables                                |
 | Bundler      | Vite            | Fast HMR, native ESM, minimal config                                                              |
-| Routing      | Vue Router 4    | Official router; route props keep components decoupled from routing                               |
+| Routing      | Vue Router 5    | Official router; route props keep components decoupled from routing                               |
 | Styling      | Tailwind CSS v4 | Utility-first with custom design tokens; no runtime CSS-in-JS overhead                            |
 | Data / Utils | VueUse          | Battle-tested reactive primitives (`useFetch`, `refDebounced`) — no need to reimplement           |
 
