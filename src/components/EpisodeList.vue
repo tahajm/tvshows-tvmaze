@@ -6,26 +6,23 @@ import { computed, ref } from 'vue';
 
 const props = defineProps<{ episodes: Episode[] | undefined }>();
 
-const selectedSeason = ref<number | null>(null);
+const selectedSeason = ref<number | null>(
+  props.episodes?.length ? props.episodes[0].season : null,
+);
+
 const seasonList = computed(() => {
   if (!props.episodes) return [];
   return [...new Set(props.episodes.map((e) => e.season))];
 });
 
-const activeSeason = computed(() =>
-  seasonList.value.includes(selectedSeason.value!)
-    ? selectedSeason.value
-    : (seasonList.value[0] ?? null),
-);
-
 const filteredEpisodes = computed(
-  () => props.episodes?.filter((e) => e.season === activeSeason.value) ?? [],
+  () => props.episodes?.filter((e) => e.season === selectedSeason.value) ?? [],
 );
 </script>
 <template>
   <EpisodeListSeason
     :seasons="seasonList"
-    :activeSeason="activeSeason"
+    :activeSeason="selectedSeason"
     @select="selectedSeason = $event"
   />
   <ol

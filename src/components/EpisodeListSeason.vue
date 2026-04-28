@@ -2,6 +2,7 @@
 defineProps<{ seasons: number[]; activeSeason: number | null }>();
 const emit = defineEmits<{ select: [season: number] }>();
 </script>
+
 <template>
   <div class="flex items-center gap-4">
     <h3 class="font-semibold text-lg shrink-0">Seasons:</h3>
