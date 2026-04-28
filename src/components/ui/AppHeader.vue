@@ -33,6 +33,6 @@ import TVIcon from '@/components/ui/icons/TVIcon.vue';
 }
 
 .nav-link--active {
-  @apply bg-white/20 text-white;
+  @apply bg-primary-dark text-white;
 }
 </style>

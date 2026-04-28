@@ -26,7 +26,7 @@ withDefaults(
 }
 
 .tag--default {
-  @apply text-gray-500 bg-gray-100;
+  @apply text-gray-600 bg-gray-100;
 }
 
 .tag--primary {
