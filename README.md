@@ -5,23 +5,23 @@ A TV show discovery app built with Vue 3 and TypeScript, using the [TVMaze publi
 ## Requirements
 
 - Node.js 20+
-- npm
+- pnpm 10+
 
 ## Getting Started
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-| Command             | Description                                 |
-| ------------------- | ------------------------------------------- |
-| `npm run dev`       | Start dev server at `http://localhost:5173` |
-| `npm run build`     | Type-check + production build               |
-| `npm run preview`   | Preview production build                    |
-| `npm run typecheck` | Type-check without building                 |
-| `npm run lint`      | ESLint                                      |
-| `npm run format`    | Prettier                                    |
+| Command          | Description                                 |
+| ---------------- | ------------------------------------------- |
+| `pnpm dev`       | Start dev server at `http://localhost:5173` |
+| `pnpm build`     | Type-check + production build               |
+| `pnpm preview`   | Preview production build                    |
+| `pnpm typecheck` | Type-check without building                 |
+| `pnpm lint`      | ESLint                                      |
+| `pnpm format`    | Prettier                                    |
 
 ## Stack
 
