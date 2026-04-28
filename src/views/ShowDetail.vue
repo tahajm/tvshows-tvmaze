@@ -13,7 +13,7 @@ const {
   data: showDetail,
   isFetching: isLoading,
   error,
-} = useFetch<Show>(API.show(props.id)).json();
+} = useFetch<Show>(() => API.show(props.id), { refetch: true }).json();
 </script>
 
 <template>
