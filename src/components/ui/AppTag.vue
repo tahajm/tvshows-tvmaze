@@ -7,6 +7,7 @@ withDefaults(
   }>(),
   {
     variant: 'default',
+    srPrefix: undefined,
   },
 );
 </script>

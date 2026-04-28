@@ -11,7 +11,7 @@ const { isLoading, showsByGenre, error } = useShows();
     <AppLoading v-if="isLoading" />
     <ErrorMessage v-else-if="error" />
     <ul v-else>
-      <li class="py-8" v-for="(shows, genre) in showsByGenre" :key="genre">
+      <li v-for="(shows, genre) in showsByGenre" :key="genre" class="py-8">
         <h2 class="py-4 font-bold text-2xl">{{ genre }}</h2>
         <ol class="flex py-4 gap-4 overflow-x-auto snap-x">
           <li v-for="show in shows" :key="show.id" class="snap-start">

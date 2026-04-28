@@ -14,8 +14,8 @@ const emit = defineEmits<{ select: [season: number] }>();
         class="border border-primary text-primary flex rounded-lg shrink-0"
       >
         <button
-          @click="emit('select', season)"
           class="py-2 px-4 cursor-pointer"
+          @click="emit('select', season)"
         >
           {{ season }}
         </button>

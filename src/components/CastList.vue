@@ -12,7 +12,7 @@ defineProps<{ castList: Cast[] | undefined }>();
     <li v-for="cast in castList" :key="cast.person.id">
       <AppCard
         :image="cast.person.image?.medium"
-        :imageAlt="cast.person.name"
+        :image-alt="cast.person.name"
         :title="cast.person.name"
         :subtitle="cast.character.name"
         size="small"

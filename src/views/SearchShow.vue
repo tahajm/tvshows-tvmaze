@@ -16,8 +16,8 @@ const { searchTerm, data, isLoading, error, debouncedTerm } = useSearch();
       >
         <span class="mb-6">Search TV Shows</span>
         <input
-          v-model="searchTerm"
           id="searchShows"
+          v-model="searchTerm"
           type="search"
           placeholder="Search for a show..."
           class="w-full p-3 text-base border-2 border-primary rounded-xl placeholder:text-slate-400"

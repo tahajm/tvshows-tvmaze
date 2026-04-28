@@ -1,25 +1,24 @@
-import js from '@eslint/js';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import {
+  defineConfigWithVueTs,
+  vueTsConfigs,
+} from '@vue/eslint-config-typescript';
 import pluginVue from 'eslint-plugin-vue';
 import vueA11y from 'eslint-plugin-vuejs-accessibility';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import { defineConfig } from 'eslint/config';
 
-export default defineConfig([
+export default defineConfigWithVueTs(
   { ignores: ['dist/**'] },
+  { languageOptions: { globals: globals.browser } },
+  pluginVue.configs['flat/recommended'],
+  vueTsConfigs.recommended,
+  vueA11y.configs['flat/recommended'],
   {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts,vue}'],
-    plugins: { js },
-    extends: ['js/recommended'],
-    languageOptions: { globals: globals.browser },
-  },
-  tseslint.configs.recommended,
-  pluginVue.configs['flat/essential'],
-  ...vueA11y.configs['flat/recommended'],
-  {
-    files: ['**/*.vue'],
-    languageOptions: { parserOptions: { parser: tseslint.parser } },
+    files: ['src/**/*.vue'],
+    rules: {
+      'vue/no-unused-refs': 'error',
+      'vue/no-template-shadow': 'error',
+    },
   },
   eslintConfigPrettier,
-]);
+);

@@ -22,7 +22,7 @@ const filteredEpisodes = computed(
 <template>
   <EpisodeListSeason
     :seasons="seasonList"
-    :activeSeason="selectedSeason"
+    :active-season="selectedSeason"
     @select="selectedSeason = $event"
   />
   <ol

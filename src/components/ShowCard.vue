@@ -11,9 +11,9 @@ const props = defineProps<{ show: Show }>();
   <RouterLink :to="`/show/${props.show.id}`">
     <AppCard
       :image="props.show.image?.medium"
-      :imageAlt="props.show.name"
+      :image-alt="props.show.name"
       :title="props.show.name"
-      :hoverAnimation="true"
+      :hover-animation="true"
       size="large"
     >
       <template #subtitle>
