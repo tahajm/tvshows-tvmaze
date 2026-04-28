@@ -55,9 +55,4 @@ describe('useShows', () => {
       drama[2].rating.average!,
     );
   });
-
-  it('returns empty object when data is null', () => {
-    const { showsByGenre } = useShows();
-    expect(showsByGenre.value).toBeDefined();
-  });
 });

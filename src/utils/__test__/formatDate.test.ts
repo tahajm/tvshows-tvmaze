@@ -10,4 +10,8 @@ describe('formatDate', () => {
   it('returns empty string for null', () => {
     expect(formatDate(null)).toBe('');
   });
+
+  it('it returns empty string for non valid dates', () => {
+    expect(formatDate('invalid date')).toBe('');
+  });
 });

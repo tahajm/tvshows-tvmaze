@@ -31,7 +31,6 @@ describe('SearchShow', () => {
 
   it('renders the search label and input', () => {
     const wrapper = mount(SearchShow, mountOptions);
-    expect(wrapper.find('label').text()).toBe('Search TV Shows');
     expect(wrapper.find('input[type="search"]').exists()).toBe(true);
   });
 

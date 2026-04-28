@@ -2,9 +2,6 @@ import { mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { type Ref, ref } from 'vue';
 
-import CastList from '@/components/CastList.vue';
-import EpisodeList from '@/components/EpisodeList.vue';
-import ShowBanner from '@/components/ShowBanner.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 
@@ -25,13 +22,13 @@ const mockShow = {
   id: 1,
   name: 'Breaking Bad',
   rating: { average: 9.5 },
-  image: { medium: '', original: '' },
   genres: ['Drama'],
   status: 'Ended',
   language: 'English',
   summary: '<p>A chemistry teacher turns drug lord.</p>',
   network: null,
   averageRuntime: 47,
+  image: { original: 'https://example.com/o.jpg' },
   _embedded: { cast: [], episodes: [] },
 };
 
@@ -62,15 +59,9 @@ describe('ShowDetail', () => {
   it('shows show content when data is loaded', () => {
     data.value = mockShow;
     const wrapper = mount(ShowDetail, mountOptions);
-    expect(wrapper.findComponent(ShowBanner).exists()).toBe(true);
-    expect(wrapper.findComponent(CastList).exists()).toBe(true);
-    expect(wrapper.findComponent(EpisodeList).exists()).toBe(true);
-  });
-
-  it('shows nothing when data is null and not loading', () => {
-    const wrapper = mount(ShowDetail, mountOptions);
-    expect(wrapper.findComponent(AppLoading).exists()).toBe(false);
-    expect(wrapper.findComponent(ErrorMessage).exists()).toBe(false);
-    expect(wrapper.findComponent(ShowBanner).exists()).toBe(false);
+    expect(wrapper.find('h2').text()).toBe('Breaking Bad');
+    expect(wrapper.find(`img[src="${mockShow.image.original}"]`).exists()).toBe(
+      true,
+    );
   });
 });

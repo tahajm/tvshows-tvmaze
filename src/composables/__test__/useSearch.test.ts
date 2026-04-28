@@ -34,11 +34,14 @@ describe('useSearch', () => {
     const { searchTerm } = useSearch();
     searchTerm.value = 'Breaking Bad';
     await nextTick();
-    expect(mockExecute).toHaveBeenCalled();
+    expect(mockExecute).toHaveBeenCalledOnce();
   });
 
   it('does not fetch for empty search term', async () => {
     const { searchTerm } = useSearch();
+    searchTerm.value = 'foo';
+    await nextTick();
+    mockExecute.mockClear();
     searchTerm.value = '';
     await nextTick();
     expect(mockExecute).not.toHaveBeenCalled();
