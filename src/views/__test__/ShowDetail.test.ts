@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { ref, type Ref } from 'vue';
-import ShowDetail from './ShowDetail.vue';
+import ShowDetail from '../ShowDetail.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import ShowBanner from '@/components/ShowBanner/ShowBanner.vue';
