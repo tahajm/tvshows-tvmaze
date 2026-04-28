@@ -1,5 +1,6 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { nextTick, ref, type Ref } from 'vue';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { nextTick, type Ref, ref } from 'vue';
+
 import { useSearch } from '../useSearch';
 
 const mockExecute = vi.fn();

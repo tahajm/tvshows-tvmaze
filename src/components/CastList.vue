@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Cast } from '@/types/shows';
 import AppCard from '@/components/ui/AppCard.vue';
+import type { Cast } from '@/types/shows';
 
 defineProps<{ castList: Cast[] | undefined }>();
 </script>

@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { useFetch } from '@vueuse/core';
-import { API } from '@/config/api';
-import type { Show } from '@/types/shows';
-import ShowBanner from '@/components/ShowBanner.vue';
-import EpisodeList from '@/components/EpisodeList.vue';
+
 import CastList from '@/components/CastList.vue';
+import EpisodeList from '@/components/EpisodeList.vue';
+import ShowBanner from '@/components/ShowBanner.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
+import { API } from '@/config/api';
+import type { Show } from '@/types/shows';
 
 const props = defineProps<{ id: string }>();
 const {

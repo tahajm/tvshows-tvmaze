@@ -1,6 +1,6 @@
 <template>
   <svg
-    fill="hsl(228, 97%, 42%)"
+    fill="var(--color-primary)"
     viewBox="0 0 24 24"
     width="24"
     height="24"

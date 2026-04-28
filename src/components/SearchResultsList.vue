@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { SearchResult } from '@/types/shows';
-import ShowCard from '@/components/ShowCard.vue';
 import { computed } from 'vue';
+
+import ShowCard from '@/components/ShowCard.vue';
+import type { SearchResult } from '@/types/shows';
 
 const props = defineProps<{ searchResults: SearchResult[] | null }>();
 

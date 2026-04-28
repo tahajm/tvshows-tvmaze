@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AppLoading from '@/components/ui/AppLoading.vue';
 import SearchResultList from '@/components/SearchResultsList.vue';
+import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import { useSearch } from '@/composables/useSearch';
 

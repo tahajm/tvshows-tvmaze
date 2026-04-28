@@ -1,6 +1,8 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { ref } from 'vue';
+
 import type { Show } from '@/types/shows';
+
 import { useShows } from '../useShows';
 
 const mockShows: Show[] = [

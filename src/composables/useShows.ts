@@ -1,7 +1,8 @@
-import type { Show } from '@/types/shows';
 import { useFetch } from '@vueuse/core';
 import { computed } from 'vue';
+
 import { API } from '@/config/api';
+import type { Show } from '@/types/shows';
 
 export function useShows() {
   const {

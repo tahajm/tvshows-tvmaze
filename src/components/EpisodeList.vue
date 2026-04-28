@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { Episode } from '@/types/shows';
-import EpisodeListSeason from '@/components/EpisodeListSeason.vue';
-import EpisodeListItem from '@/components/EpisodeListItem.vue';
 import { computed, ref } from 'vue';
+
+import EpisodeListItem from '@/components/EpisodeListItem.vue';
+import EpisodeListSeason from '@/components/EpisodeListSeason.vue';
+import type { Episode } from '@/types/shows';
 
 const props = defineProps<{ episodes: Episode[] | undefined }>();
 

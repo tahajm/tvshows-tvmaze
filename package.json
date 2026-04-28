@@ -11,6 +11,7 @@
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "vitest",
     "prepare": "husky"
   },
@@ -34,6 +35,7 @@
     "@vue/tsconfig": "^0.9.1",
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
     "eslint-plugin-vue": "^10.9.0",
     "eslint-plugin-vuejs-accessibility": "^2.5.0",
     "globals": "^17.5.0",

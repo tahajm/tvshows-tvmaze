@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import ShowCard from '@/components/ShowCard.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
-import ShowCard from '@/components/ShowCard.vue';
 import { useShows } from '@/composables/useShows';
 
 const { isLoading, showsByGenre, error } = useShows();

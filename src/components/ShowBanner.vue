@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { Show } from '@/types/shows';
-import ShowBannerContent from './ShowBannerContent.vue';
 import { computed } from 'vue';
+
+import type { Show } from '@/types/shows';
 import { stripHtml } from '@/utils/stripHtml';
+
+import ShowBannerContent from './ShowBannerContent.vue';
 
 const props = defineProps<{ show: Show }>();
 
@@ -37,6 +39,7 @@ const summary = computed(() =>
         v-if="show.image?.original"
         class="w-full md:w-sm aspect-2/3 object-cover rounded-2xl self-start shrink-0 shadow-2xl"
         :src="show.image.original"
+        :srcset="`${show.image.medium} 1x ${show.image.original} 2x`"
         :alt="show.name"
         loading="eager"
         fetchpriority="high"

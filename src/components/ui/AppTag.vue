@@ -2,7 +2,7 @@
 withDefaults(
   defineProps<{
     label: string | null | undefined;
-    variant?: 'default' | 'primary' | 'outlined' | 'plain';
+    variant?: 'default' | 'primary';
     srPrefix?: string;
   }>(),
   {
@@ -32,13 +32,5 @@ withDefaults(
 
 .tag--primary {
   @apply text-primary bg-primary-surface;
-}
-
-.tag--outlined {
-  @apply text-primary border border-primary bg-transparent;
-}
-
-.tag--plain {
-  @apply text-gray-500 bg-transparent;
 }
 </style>

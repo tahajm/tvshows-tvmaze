@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Episode } from '@/types/shows';
-import RateBadge from '@/components/ui/RateBadge.vue';
 import ImagePlaceholder from '@/components/ui/ImagePlaceholder.vue';
+import RateBadge from '@/components/ui/RateBadge.vue';
+import type { Episode } from '@/types/shows';
 import { formatDate } from '@/utils/formatDate';
 
 defineProps<{ episode: Episode }>();

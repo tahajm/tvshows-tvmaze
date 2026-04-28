@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Show } from '@/types/shows';
 import AppTag from '@/components/ui/AppTag.vue';
 import RateBadge from '@/components/ui/RateBadge.vue';
+import type { Show } from '@/types/shows';
 
 defineProps<{ show: Show; summary: string }>();
 </script>

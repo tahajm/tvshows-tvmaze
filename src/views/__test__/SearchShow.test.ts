@@ -1,10 +1,12 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { mount } from '@vue/test-utils';
-import { ref, type Ref } from 'vue';
-import SearchShow from '../SearchShow.vue';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { type Ref, ref } from 'vue';
+
+import SearchResultList from '@/components/SearchResultsList.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
-import SearchResultList from '@/components/SearchResultsList.vue';
+
+import SearchShow from '../SearchShow.vue';
 
 const isLoading: Ref<boolean> = ref(false);
 const error: Ref<unknown> = ref(null);

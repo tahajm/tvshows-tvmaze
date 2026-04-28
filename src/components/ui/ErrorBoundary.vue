@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onErrorCaptured, watch } from 'vue';
+import { onErrorCaptured, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
 const error = ref<Error | null>(null);

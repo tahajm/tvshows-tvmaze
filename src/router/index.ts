@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import ShowListView from '@/views/ShowsList.vue';
-import ShowDetail from '@/views/ShowDetail.vue';
-import SearchShow from '@/views/SearchShow.vue';
+const ShowListView = import('@/views/ShowsList.vue');
+const ShowDetail = import('@/views/ShowDetail.vue');
+const SearchShow = import('@/views/SearchShow.vue');
 import NotFound from '@/views/NotFound.vue';
 
 const routes = [

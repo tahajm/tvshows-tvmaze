@@ -1,7 +1,8 @@
-import { API } from '@/config/api';
-import type { SearchResult } from '@/types/shows';
 import { refDebounced, useFetch } from '@vueuse/core';
 import { computed, ref, watch } from 'vue';
+
+import { API } from '@/config/api';
+import type { SearchResult } from '@/types/shows';
 
 export function useSearch() {
   const DEBOUNCE_TIME = 300;
