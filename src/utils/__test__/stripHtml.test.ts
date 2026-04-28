@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { stripHtml } from './stripHtml';
+import { stripHtml } from '../stripHtml';
 
 describe('stripHtml', () => {
   it('returns empty string for undefined', () => {

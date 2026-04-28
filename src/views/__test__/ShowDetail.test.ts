@@ -18,6 +18,7 @@ vi.mock('@vueuse/core', () => ({
   useFetch: vi.fn(() => ({
     json: () => ({ data, isFetching: isLoading, error }),
   })),
+  useTitle: vi.fn(),
 }));
 
 const mockShow = {
