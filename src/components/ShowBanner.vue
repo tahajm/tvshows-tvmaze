@@ -35,10 +35,11 @@ const summary = computed(() =>
     >
       <img
         v-if="show.image?.original"
-        class="w-full md:w-sm rounded-2xl self-start shrink-0 shadow-2xl"
+        class="w-full md:w-sm aspect-2/3 object-cover rounded-2xl self-start shrink-0 shadow-2xl"
         :src="show.image.original"
         :alt="show.name"
         loading="eager"
+        fetchpriority="high"
       />
       <ShowBannerContent :show="show" :summary="summary" />
     </div>
