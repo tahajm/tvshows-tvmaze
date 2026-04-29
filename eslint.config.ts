@@ -9,7 +9,7 @@ import vueA11y from 'eslint-plugin-vuejs-accessibility';
 import globals from 'globals';
 
 export default defineConfigWithVueTs(
-  { ignores: ['dist/**'] },
+  { ignores: ['dist/**', 'coverage/**'] },
   { languageOptions: { globals: globals.browser } },
   pluginVue.configs['flat/recommended'],
   vueTsConfigs.recommended,

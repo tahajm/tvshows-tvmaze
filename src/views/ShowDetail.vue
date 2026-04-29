@@ -8,6 +8,7 @@ import ShowBanner from '@/components/ShowBanner.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import { API } from '@/config/api';
+import { APP_NAME } from '@/config/app';
 import type { Show } from '@/types/shows';
 
 const props = defineProps<{ id: string }>();
@@ -18,8 +19,8 @@ const {
 } = useFetch<Show>(() => API.show(props.id), { refetch: true }).json();
 
 const viewTitle = computed(() => {
-  if (showDetail.value) return `${showDetail.value.name} - TV Shows`;
-  return 'TV Shows';
+  if (showDetail.value) return `${showDetail.value.name} - ${APP_NAME}`;
+  return APP_NAME;
 });
 useTitle(viewTitle);
 </script>

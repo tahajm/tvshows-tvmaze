@@ -5,8 +5,9 @@ import SearchResultList from '@/components/SearchResultsList.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import { useSearch } from '@/composables/useSearch';
+import { APP_NAME } from '@/config/app';
 
-useTitle('Search — TV Shows');
+useTitle(`Search — ${APP_NAME}`);
 
 const { searchTerm, data, isLoading, error, debouncedTerm } = useSearch();
 </script>

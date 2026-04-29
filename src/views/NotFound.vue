@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useTitle } from '@vueuse/core';
 
-useTitle('404 Not Found — TV Shows');
+import { APP_NAME } from '@/config/app';
+
+useTitle(`404 Not Found — ${APP_NAME}`);
 </script>
 
 <template>

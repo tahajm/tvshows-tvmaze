@@ -190,6 +190,5 @@ Items intentionally deferred — known trade-offs for the scope of this assignme
 - **URL-bound search state** — search term is local component state; refreshing or sharing a search URL loses context. Fix: `useRouteQuery('q')` from VueUse.
 - **Skeleton loading** — the spinner gives no layout preview. Skeleton blocks in `ShowsList` and `ShowDetail` would improve perceived performance.
 - **Pagination / virtualisation** — `/shows` returns ~240 records rendered all at once. TVMaze supports `?page=`; alternatively, virtualise the horizontal lists.
-- **Prefetching** — hovering a show card could prefetch `API.show(id)` for near-instant navigation.
 - **Search filters** — no genre filter or sort-by-rating on the search page.
 - **No e2e tests** — a single Playwright happy-path script (home → show detail → search) would round out the testing story.

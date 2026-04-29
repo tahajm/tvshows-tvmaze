@@ -17,9 +17,15 @@ defineProps<{ show: Show; summary: string }>();
     <div
       class="text-white flex flex-wrap gap-3 text-sm md:text-base items-center"
     >
-      <span>{{ show.language }}</span>
-      <span>{{ show.network?.name ?? show.webChannel?.name }}</span>
-      <time v-if="show.averageRuntime" :datetime="`PT${show.averageRuntime}M`">
+      <span aria-label="Language">{{ show.language }}</span>
+      <span aria-label="Channel">
+        {{ show.network?.name ?? show.webChannel?.name }}
+      </span>
+      <time
+        v-if="show.averageRuntime"
+        :datetime="`PT${show.averageRuntime}M`"
+        aria-label="Runtime"
+      >
         {{ show.averageRuntime }} min
       </time>
     </div>

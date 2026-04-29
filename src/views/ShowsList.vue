@@ -5,8 +5,9 @@ import ShowCard from '@/components/ShowCard.vue';
 import AppLoading from '@/components/ui/AppLoading.vue';
 import ErrorMessage from '@/components/ui/ErrorMessage.vue';
 import { useShows } from '@/composables/useShows';
+import { APP_NAME } from '@/config/app';
 
-useTitle('TV Shows');
+useTitle(APP_NAME);
 
 const { isLoading, showsByGenre, error } = useShows();
 </script>
