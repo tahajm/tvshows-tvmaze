@@ -192,3 +192,4 @@ Items intentionally deferred — known trade-offs for the scope of this assignme
 - **Pagination / virtualisation** — `/shows` returns ~240 records rendered all at once. TVMaze supports `?page=`; alternatively, virtualise the horizontal lists.
 - **Search filters** — no genre filter or sort-by-rating on the search page.
 - **No e2e tests** — a single Playwright happy-path script (home → show detail → search) would round out the testing story.
+- **Localisation (i18n)** — all UI strings are hardcoded in English. `vue-i18n` would centralise copy into a single locale file and make the app translatable.
